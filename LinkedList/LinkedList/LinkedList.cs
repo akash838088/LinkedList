@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LinkedList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,38 +7,46 @@ using System.Threading.Tasks;
 
 namespace LinkedList
 {
-   public class LinkedList
+    public class LinkedList
     {
         public Node head;
-        public void Add(int data)
+        //creating add method to add the data in linked list sequentially
+        public void Add(int data) //56  30  70 
         {
             Node node = new Node(data);
-            if(this.head == null)
+            if (head == null)
             {
-                this.head = node;
+                this.head = node;   //56  30 70
             }
             else
             {
                 Node temp = head;
-                while(temp.next!= null)
+                while (temp.next != null)
                 {
                     temp = temp.next;
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted into linked list ",node.data);
+            Console.WriteLine("{0} Values Are Inserted", node.data);
+        }
+        public void AddFirst(int data)
+        {
+            Node node = new Node(data);
+            node.next = this.head;
+            this.head = node;
+            Console.WriteLine("{0} inserted into linked list ", node.data);
         }
         public void Display()
         {
             Node temp = this.head;
             if (temp == null)
             {
-                Console.WriteLine("Linked list is empty");    
+                Console.WriteLine("Liked List Is Empty");
             }
-            Console.WriteLine("Linked list is: ");
+            Console.WriteLine("Linked list IS :");
             while (temp != null)
             {
-                Console.WriteLine(temp.data + " ");
+                Console.WriteLine(temp.data + "");
                 temp = temp.next;
             }
         }

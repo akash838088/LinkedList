@@ -24,7 +24,12 @@ namespace LinkedList
                         linkedList.Add(30);
                         linkedList.Add(70);
                         break;
-                        case 2:
+                    case 2:
+                        linkedList.Add(70);
+                        linkedList.Add(30);
+                        linkedList.Add(56);
+                        break;
+                    case 3:
                         linkedList.Display();
                         break;
                     default:
