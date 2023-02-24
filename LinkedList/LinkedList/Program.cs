@@ -20,6 +20,7 @@ namespace LinkedList
                 Console.WriteLine("3:ReverseContact");
                 Console.WriteLine("4:Append");
                 Console.WriteLine("5:Remove First Node");
+                Console.WriteLine("6:Remove Last Node");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -46,6 +47,12 @@ namespace LinkedList
                         linkedList.Add(30);
                         linkedList.Add(70);
                         linkedList.RemoveFirstNode();
+                        break;
+                    case 6:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.RemoveLastNode();
                         break;
                     default:
                         Console.WriteLine("Enter correct option");
