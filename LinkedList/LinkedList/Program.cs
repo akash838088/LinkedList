@@ -18,6 +18,7 @@ namespace LinkedList
                 Console.WriteLine("1:Create linked list");
                 Console.WriteLine("2:Display");
                 Console.WriteLine("3:ReverseContact");
+                Console.WriteLine("4:Append");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -33,6 +34,11 @@ namespace LinkedList
                         linkedList.InReverse(56);
                         linkedList.InReverse(30);
                         linkedList.InReverse(70);
+                        break;
+                    case 4:
+                        linkedList.Append(56);
+                        linkedList.Append(30);
+                        linkedList.Append(70);
                         break;
                     default:
                         Console.WriteLine("Enter correct option");
