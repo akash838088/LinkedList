@@ -10,13 +10,12 @@ namespace LinkedList
     public class LinkedList
     {
         public Node head;
-        //creating add method to add the data in linked list sequentially
-        public void Add(int data) //56  30  70 
+        public void Add(int data)
         {
             Node node = new Node(data);
-            if (head == null)
+            if (this.head == null)
             {
-                this.head = node;   //56  30 70
+                this.head = node;
             }
             else
             {
@@ -50,5 +49,21 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
+
+            public void InReverse(int data)
+            {
+                Node node = new Node(data);
+                if (head == null)
+                {
+                    head = node;
+                }
+                else
+                {
+                    Node temp = head;
+                    node.next = temp;
+                    head = node;
+                }
+                Console.WriteLine($"{node.data} ");
+            }
+        }
     }
-}

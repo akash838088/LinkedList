@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinkedList
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -15,7 +15,9 @@ namespace LinkedList
             while (flag)
             {
                 Console.WriteLine("Enter Option");
-                Console.WriteLine("1:Create linked list\n2: Display ");
+                Console.WriteLine("1:Create linked list");
+                Console.WriteLine("2:Display");
+                Console.WriteLine("3:ReverseContact");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -24,16 +26,16 @@ namespace LinkedList
                         linkedList.Add(30);
                         linkedList.Add(70);
                         break;
-                    case 2:
-                        linkedList.Add(70);
-                        linkedList.Add(30);
-                        linkedList.Add(56);
-                        break;
-                    case 3:
+                     case 2:
                         linkedList.Display();
                         break;
+                    case 3:
+                        linkedList.InReverse(56);
+                        linkedList.InReverse(30);
+                        linkedList.InReverse(70);
+                        break;
                     default:
-                        Console.WriteLine("Enter Correct Option");
+                        Console.WriteLine("Enter correct option");
                         break;
                 }
             }
