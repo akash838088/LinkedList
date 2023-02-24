@@ -50,21 +50,21 @@ namespace LinkedList
             }
         }
 
-            public void InReverse(int data)
+        public void InReverse(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
             {
-                Node node = new Node(data);
-                if (head == null)
-                {
-                    head = node;
-                }
-                else
-                {
-                    Node temp = head;
-                    node.next = temp;
-                    head = node;
-                }
-                Console.WriteLine($"{node.data} ");
+                head = node;
             }
+            else
+            {
+                Node temp = head;
+                node.next = temp;
+                head = node;
+            }
+            Console.WriteLine($"{node.data} ");
+        }
         public void Append(int data)
         {
             Node node = new Node(data);
@@ -80,4 +80,14 @@ namespace LinkedList
             }
             else { head = node; }
         }
+        public void RemoveFirstNode()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("linked list is empty");
+            }
+            this.head = this.head.next;
+            Console.WriteLine("the first element is deleted");
+        }
     }
+}
